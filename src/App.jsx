@@ -87,19 +87,19 @@ const App = () => {
       <form className="account__input--info">
         <input className="login"
           type="text" 
-          placeholder="логин"
+          placeholder="Login"
           value={newAccount}
           onChange={onNewAccountChange}
         />
         <input className="password"
           type="password" 
-          placeholder="пароль"
+          placeholder="Password"
           value={newPassword}
           onChange={onNewPasswordChange}
         />
         <input className="platform"
           type="platform" 
-          placeholder="платформа"
+          placeholder="Platform"
           value={newPlatform}
           onChange={onNewPlatformChange}
         />
@@ -110,7 +110,8 @@ const App = () => {
           <li key={account.id} className="account__item">
             <p>{account.text} <button className="edit__login--button" onClick={(event) => handleEditAccount(account.id)}>edit login</button> </p> 
             <p>{account.password} <input className="password__generator" type="text" readOnly value={password}/> 
-            <button className="edit__password--button" onClick={generatePassword}>Generate Password</button> <button className="edit__login--button" onClick={(event) => handleEditAccountPassword(account.id)}>edit password</button> </p> 
+            <button className="edit__password--button" onClick={generatePassword}>Generate Password</button> 
+            <button className="edit__login--button" onClick={(event) => handleEditAccountPassword(account.id)}>edit password</button> </p> 
             <p>{account.platform} <button className="edit__platform--button" onClick={(event) => handleEditAccountPlatform(account.id)}>edit platform</button> </p>
             <button className="remove__account--button" onClick={(event) => handleRemoveAccount(account.id)}>remove account</button>
           </li>
